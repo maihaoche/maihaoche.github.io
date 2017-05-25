@@ -1,0 +1,72 @@
+title: 卖好车研发中心
+description: 卖好车技术团队主页
+keywords: 买好车,卖好车,maihaoche,mhc,mdc
+tagline:
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Handling Reading
+exclude:
+  - .asset-cache
+  - .sass-cache
+  - node_modules
+  - src
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.coffee
+  - bower.json
+  - package.json
+  - CNAME
+  # - README.md
+encoding: utf-8
+
+# Plugins
+gems:
+  - jekyll-assets
+  - jekyll-contentblocks
+  - jekyll-seo-tag
+  - jekyll/tagging
+  - jekyll-tagging-related_posts
+  - jekyll_version_plugin
+
+# Conversion
+markdown: kramdown
+highlighter: pygments
+
+# Outputting
+permalink: /posts/:title/
+timezone: Asia/Shanghai
+
+# YAML frontmatter
+defaults:
+  # 默认
+  - scope:
+      path: ""
+    values:
+      layout: default
+  # 页面
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: demos
+    values:
+      layout: default
+
+
+
+# =====
+# Customized configurations
+# =====
+
+# Modules
+module:
+  comment: true
+  share: true
