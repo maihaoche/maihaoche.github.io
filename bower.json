@@ -1,0 +1,40 @@
+{
+  "name": "mdc",
+  "homepage": "https://maihaoche.github.io/muu/",
+  "authors": [
+    "Ourai Lin <ourairyu@gmail.com> (http://ourai.ws/)"
+  ],
+  "description": "Unified UI framework for MaiHaoChe.com",
+  "main": [
+    "dist/muu/stylesheets/admin.css",
+    "dist/muu/stylesheets/admin.js"
+  ],
+  "keywords": [
+    "maihaoche",
+    "ui",
+    "dashboard",
+    "admin",
+    "website"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.json",
+    "*.md",
+    "gulpfile.js",
+    "bower_components",
+    "build",
+    "docs",
+    "examples",
+    "node_modules",
+    "site",
+    "src",
+    "test",
+    "tests",
+    "!/dist/**/*",
+    "/dist/handie"
+  ],
+  "devDependencies": {
+    "bootstrap-3.3.7": "bootstrap#3.3.7"
+  }
+}

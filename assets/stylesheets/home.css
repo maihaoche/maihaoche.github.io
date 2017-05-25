@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+body {
+  font-weight: 300;
+  background-color: #E9E9E9;
+}
+
+img {
+  max-width: 100%;
+}
+
+.Page-body {
+  min-height: 100%;
+}
+
+.Page-body:before,
+.Page-body:after {
+  position: relative;
+  z-index: -999999999;
+  content: $UN-space;
+  display: block;
+  visibility: hidden;
+  background: transparent none;
+}
+
+.Page-body:before {
+  height: 0;
+}
+
+.Page-body:after {
+  height: 210px;
+}
+
+.Content-header {
+  padding: 100px 0;
+  background-color: #1e2332;
+  border-bottom: 1px solid #ffa200;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+  /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 0 0 rgba(0, 0, 0, 0.1);*/
+}
+
+.Content-header h1 {
+  height: 36px;
+  margin: 0;
+  font-size: 36px;
+  font-weight: inherit;
+  line-height: 1;
+  text-align: center;
+}
+
+.Content-header h1:before {
+  content: "\0020";
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.Content-header h1:before,
+.Content-header h1 > a,
+.Content-header h1 > a span {
+  display: inline-block;
+}
+
+.Content-header h1 > a {
+  height: 100%;
+  color: #fff;
+}
+
+.Content-header h1 > a,
+.Content-header h1 > a img,
+.Content-header h1 > a span {
+  vertical-align: top;
+}
+
+.Content-header h1 > a img {
+  height: 100%;
+}
+
+.Content-header h1 > a span {
+  margin-left: 15px;
+  padding-left: 12px;
+  border-left: 1px solid #fff;
+}
