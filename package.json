@@ -13,6 +13,7 @@
   "devDependencies": {
     "express": "^4.15.3",
     "fis-parser-node-sass": "^1.0.1",
+    "fis-postprocessor-jswrapper": "0.0.14",
     "fis3": "^3.4.32",
     "fis3-hook-commonjs": "^0.1.26",
     "fis3-parser-babel": "^1.2.4",

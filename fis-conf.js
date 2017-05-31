@@ -17,7 +17,8 @@ fis.set("project.ignore", fis.get("project.ignore").concat([
   "routes/**",
   "scripts/**",
   "vendors/**",
-  "static/**"
+  "static/**",
+  "app.js"
 ]));
 
 fis.hook("commonjs");
@@ -33,9 +34,8 @@ fis
     useCompile: false,
     release: false
   })
-  .match("/static/bower_components/**", {
-    useCompile: false,
-    release: false
+  .match("/vendors/**", {
+    useCompile: false
   });
 
 if ( media === "dev" ) {
@@ -50,6 +50,13 @@ if ( media === "dev" ) {
         keepSpecialComments: 0
       })
     })
+    .match("*.js", {
+      rExt: ".js",
+      parser: fis.plugin("babel", {
+        comments: false
+      }),
+      optimizer: fis.plugin("uglify-js")
+    })
     .match("*.pug", {
       rExt: ".html",
       parser: fis.plugin("pug", {
@@ -57,6 +64,13 @@ if ( media === "dev" ) {
       })
     })
     .match("/assets/stylesheets/(*).scss", {
+      release: "static/assets/$1"
+    })
+    .match("/assets/javascripts/(*).js", {
+      postprocessor: fis.plugin("jswrapper", {
+        wrapAll : true,
+        template : "(function(){\n${content}\n})();"
+      }),
       release: "static/assets/$1"
     })
     .match("/pages/(*).pug", {

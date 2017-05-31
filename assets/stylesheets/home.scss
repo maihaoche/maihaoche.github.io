@@ -7,7 +7,9 @@
 }
 
 .Page-header {
+  @include stretch;
   z-index: 2;
+  margin-bottom: 0 !important;
   background-color: transparent;
   border-bottom-style: none;
 }
@@ -27,6 +29,21 @@
   box-shadow: 0 1px 8px rgba(#ccc, .3);
 }
 
+.unslider {
+  position: relative;
+}
+
+.unslider-nav {
+  @include stretch(auto, 0, 20px);
+  z-index: 3;
+
+  ol li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+  }
+}
+
 .Slide {
   position: relative;
   height: 100%;
@@ -40,7 +57,7 @@
     content: $UN-space;
     @include stretch;
     z-index: 1;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .65);
   }
 }
 
@@ -50,7 +67,6 @@
   height: 100%;
 
   > div {
-    margin-top: -60px;
     @include text-middle(".Slide-description");
   }
 }

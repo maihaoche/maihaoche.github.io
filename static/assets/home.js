@@ -1,0 +1,1 @@
+"use strict";!function(){function n(n){n.unslider({autoplay:!0,infinite:!0,arrows:!1,delay:5e3}),n.on({mouseover:function(){n.unslider("stop")},mouseout:function(){n.unslider("start")}})}$(document).ready(function(){n($(".Content-slides"))})}();
