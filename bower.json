@@ -35,6 +35,7 @@
     "/dist/handie"
   ],
   "devDependencies": {
-    "bootstrap-3.3.7": "bootstrap#3.3.7"
+    "bootstrap-sass-3.3.7": "bootstrap-sass#3.3.7",
+    "trick-0.4.2": "ourai/trick#0.4.2"
   }
 }

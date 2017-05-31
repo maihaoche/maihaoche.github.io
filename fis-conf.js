@@ -45,7 +45,11 @@ if ( media === "dev" ) {
     })
     .match("*.scss", {
       rExt: ".css",
-      parser: fis.plugin("node-sass")
+      parser: fis.plugin("node-sass"),
+      optimizer: fis.plugin("clean-css", {
+        keepSpecialComments: 0
+      }),
+      useHash: true
     })
     .match("*.pug", {
       rExt: ".html",
