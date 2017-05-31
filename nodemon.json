@@ -1,0 +1,6 @@
+{
+  "ignore": [
+    "vendors/*",
+    "assets/*"
+  ]
+}

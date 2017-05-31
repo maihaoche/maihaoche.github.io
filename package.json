@@ -1,0 +1,22 @@
+{
+  "name": "mdc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Homepage of MaiHaoChe Develop Center",
+  "author": "Ourai Lin <ourairyu@gmail.com> (http://ourai.ws)",
+  "homepage": "http://mdc.maihaoche.com/",
+  "scripts": {
+    "serve": "DEBUG=mdc PORT=3000 nodemon ./app.js --app=mdc --config ./nodemon.json",
+    "build": "fis3 release",
+    "watch": "fis3 release -w"
+  },
+  "devDependencies": {
+    "express": "^4.15.3",
+    "fis-parser-node-sass": "^1.0.1",
+    "fis3": "^3.4.32",
+    "fis3-hook-commonjs": "^0.1.26",
+    "fis3-parser-babel": "^1.2.4",
+    "fis3-parser-pug": "0.0.2",
+    "nodemon": "^1.11.0"
+  }
+}
