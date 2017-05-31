@@ -2,7 +2,7 @@ html {
   @include layout-sandwich(
     60px,
     ".Page-header",
-    auto,
+    150px,
     ".Page-footer",
     ".Page-body"
   );
@@ -16,31 +16,34 @@ html {
   @include pie-clearfix;
 }
 
-.Header ul {
-  list-style: none inside none;
-  margin: 0;
-  padding: 0;
+.Header {
+  ul {
+    list-style: none inside none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    &:link,
+    &:visited,
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
 }
 
 .Header-brand,
 .Header-brand a,
 .Header-extra,
 .Header-operations,
-.Header-action,
-.Header-navs,
-.Header-navs ul,
-.Header-navs li {
+.Header-action {
   height: 100%;
 }
 
-.Header-brand,
-.Header-navs,
-.Header-navs ul,
-.Header-navs li {
-  float: left;
-}
-
 .Header-brand {
+  float: left;
   margin-left: 5px;
 
   a {
@@ -90,24 +93,25 @@ html {
   }
 }
 
-.Header-navs {
-  li {
-    padding: 0 5px;
+.Header-extra {
+  float: right;
+}
 
-    &:before {
-      content: $UN-space;
-      height: 100%;
-    }
+.Header-navs {
+  &,
+  ul,
+  li {
+    float: left;
+    height: 100%;
   }
 
-  li:before,
-  a {
-    @include inline-block;
+  li {
+    padding: 0 5px;
+    @include text-middle("> a");
   }
 
   a {
     color: #fff;
-    text-decoration: none !important;
   }
 }
 
@@ -125,5 +129,23 @@ html {
     line-height: 60px;
     font-size: 16px;
     border-bottom: 2px solid transparent;
+  }
+}
+
+.Header-extra .Header-navs {
+  li.is-active a,
+  a:hover {
+    background-color: #fff;
+    color: #1e2332;
+  }
+
+  a {
+    $h: 30px;
+
+    height: $h;
+    padding: 0 15px;
+    line-height: ($h - 2px);
+    border: 1px solid #fff;
+    border-radius: 3px;
   }
 }

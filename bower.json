@@ -37,6 +37,7 @@
   "devDependencies": {
     "bootstrap-sass-3.3.7": "bootstrap-sass#3.3.7",
     "buds-0.1.2": "buds#0.1.2",
+    "fontawesome-4.7.0": "fontawesome#4.7.0",
     "tangram-0.2.2": "ourai/tangram#0.2.2",
     "trick-0.4.2": "ourai/trick#0.4.2"
   }
