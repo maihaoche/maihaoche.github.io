@@ -2,7 +2,11 @@
 @import "../../vendors/compass-mixins-0.12.10/lib/compass";
 @import "../../vendors/compass-mixins-0.12.10/lib/compass/layout";
 @import "../../vendors/compass-mixins-0.12.10/lib/animation/core";
+//
 @import "../../vendors/trick-0.4.2/trick";
+@import "../../vendors/tangram-0.2.2/tangram";
+//
+@import "../../vendors/buds-0.1.2/scss/variables";
 //= Variables and mixins from Bootstrap
 @import "../../vendors/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/variables";
 @import "../../vendors/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins";

@@ -48,8 +48,7 @@ if ( media === "dev" ) {
       parser: fis.plugin("node-sass"),
       optimizer: fis.plugin("clean-css", {
         keepSpecialComments: 0
-      }),
-      useHash: true
+      })
     })
     .match("*.pug", {
       rExt: ".html",
